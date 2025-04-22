@@ -1,4 +1,4 @@
-**1.Event Capturing:**
+1.Event Capturing:
   https://www.geeksforgeeks.org/what-is-event-bubbling-and-event-capturing-in-javascript/
   https://medium.com/@snehalv.2010/event-capturing-in-js-a1b267a01bbd
   Example:
