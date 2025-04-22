@@ -1,1 +1,38 @@
+1.Event Capturing:
+  Here’s an example of using event capturing:
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Capturing Example</title>
+</head>
+<body>
+  <div id="outer">
+    <div id="middle">
+      <div id="inner">Click me!</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+JavaScript (app.js):
+
+document.getElementById("outer").addEventListener("click", function() {
+  console.log("Capturing Phase: Outer div clicked!");
+}, true); // Set the third parameter to `true` for event capturing
+
+document.getElementById("middle").addEventListener("click", function() {
+  console.log("Capturing Phase: Middle div clicked!");
+}, true);
+
+document.getElementById("inner").addEventListener("click", function() {
+  console.log("Capturing Phase: Inner div clicked!");
+}, true);
+If you click on the “Click me!” text inside the inner div, you will see the following output in the console:
+
+Capturing Phase: Outer div clicked!
+Capturing Phase: Middle div clicked!
+  
